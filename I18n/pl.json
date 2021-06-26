@@ -1,0 +1,33 @@
+{
+    "general": {
+        "meter": "Miernik",
+        "meters": "Mierniki",
+        "uncertainty": "Niepewność",
+        "measurement": "Pomiar",
+        "manufacturer": "Producent",
+        "model": "Model",
+        "source": "Źródło",
+        "photo": "Zdjęcie",
+        "3d_model": "Model 3D",
+        "reading": "odczytu",
+        "range": "zakresu",
+        "absolute": "przesunięcie"
+    },
+    "measurements": {
+        "voltage.dc": {"unit": "Volt", "description": "Napięcie DC"},
+        "voltage.dc.transfer": {"unit": "Volt", "description": "Transfer Napięcia DC"},
+        "current.dc": {"unit": "Amper", "description": "Prąd Stały"},
+        "voltage.ac": {"unit": "Volts", "description": "Napięcie AC"},
+        "voltage.ac.transfer": {"unit": "Volts", "description": "Transfer Napięcia AC"},
+        "voltage.acdc.transfer": {"unit": "Volts", "description": "Transfer AC/DC"},
+        "current.ac": {"unit": "Amper", "description": "Prąd Zmienny"},
+        "resistance.2w": {"unit": "Ohm", "description": "Rezystancja 2-Wire"},
+        "resistance.4w": {"unit": "Ohm", "description": "ResisRezystancjatance 4-Wire"},
+        "resistance.2w.transfer": {"unit": "Ohm", "description": "Transfer Rezystancji 2-Wire"},
+        "resistance.4w.transfer": {"unit": "Ohm", "description": "Transfer Rezystancji 4-Wire"},
+        "frequency": {"unit": "Herc", "description": "Częstotliwość"},
+        "capacitance": {"unit": "Farad", "description": "Pojemność"},
+        "inductance": {"unit": "Henr", "description": "Induktancja"},
+        "impedance.phase": {"unit": "stopni", "description": "Kąt Fazy Impedancji"}
+    }
+}

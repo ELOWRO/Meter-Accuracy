@@ -1,0 +1,33 @@
+{
+    "general": {
+        "meter": "Meter",
+        "meters": "Meters",
+        "uncertainty": "Uncertainty",
+        "measurement": "Measurement",
+        "manufacturer": "Manufacturer",
+        "model": "Model",
+        "source": "Source",
+        "photo": "Photo",
+        "3d_model": "3D Model",
+        "reading": "of reading",
+        "range": "of range",
+        "absolute": "offset"
+    },
+    "measurements": {
+        "voltage.dc": {"unit": "Volts", "description": "DC Voltage"},
+        "voltage.dc.transfer": {"unit": "Volts", "description": "DC Voltage Transfer"},
+        "current.dc": {"unit": "Amperes", "description": "DC Current"},
+        "voltage.ac": {"unit": "Volts", "description": "AC Voltage"},
+        "voltage.ac.transfer": {"unit": "Volts", "description": "AC Voltage Transfer"},
+        "voltage.acdc.transfer": {"unit": "Volts", "description": "AC/DC Voltage Transfer"},
+        "current.ac": {"unit": "Amperes", "description": "AC Current"},
+        "resistance.2w": {"unit": "Ohms", "description": "Resistance 2-Wire"},
+        "resistance.4w": {"unit": "Ohms", "description": "Resistance 4-Wire"},
+        "resistance.2w.transfer": {"unit": "Ohms", "description": "Resistance 2-Wire Transfer"},
+        "resistance.4w.transfer": {"unit": "Ohms", "description": "Resistance 4-Wire Transfer"},
+        "frequency": {"unit": "Herz", "description": "Frequency"},
+        "capacitance": {"unit": "Farad", "description": "Capacitance"},
+        "inductance": {"unit": "Henres", "description": "Inductance"},
+        "impedance.phase": {"unit": "degrees", "description": "Phase Angle of Impedance"}
+    }
+}
