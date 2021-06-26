@@ -40,9 +40,9 @@ Every unique meter model will be represented by a separate `json` file. Filename
 - `source` - description of source (usually datasheet)
 - `source_url` - link to source (usually to a datasheet)
 - `photo_url` - link to meter photo²
-- `photo_url_copyright` - author¹
+- `photo_url_author` - author¹
 - `usdz_model_url` - link to meter USDZ 3d model¹
-- `usdz_model_url_copyright` - author¹
+- `usdz_model_url_author` - author¹
 
 ¹-optional
 
