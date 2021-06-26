@@ -1,0 +1,492 @@
+{
+     "format": "org.macdr.v1",
+     "uid": "com.wavetek.1281",
+     "manufacturer": "Wavetek",
+     "manufacturer_full": "Wavetek Corporation",
+     "model_name": "Model 1281 Selfcal Digital Multimeter",
+     "product_identifier": "1281",
+     "source": "Datasheet",
+     "source_url": "https://xdevs.com/doc/Datron/1281/doc/1281_spex.pdf",
+
+
+
+
+
+
+     "transfer": {
+
+
+
+
+
+
+        "voltage.dc.transfer": [
+            {
+                "range": 0.1, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.00000025
+                    }
+                ]
+            },
+            {
+                "range": 1.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.000000075
+                    }
+                ]
+            },
+            {
+                "range": 10.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.00000005
+                    }
+                ]
+            },
+            {
+                "range": 100.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.000000075
+                    }
+                ]
+            },
+            {
+                "range": 1000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.00000005
+                    }
+                ]
+            }
+        ],
+
+
+
+
+
+
+        "resistance.4w.transfer": [
+            {
+                "range": 10.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.000001
+                    }
+                ]
+            },
+            {
+                "range": 100.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.0000001
+                    }
+                ]
+            },
+            {
+                "range": 1000.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.0000001
+                    }
+                ]
+            },
+            {
+                "range": 10000.0, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.0000001
+                    }
+                ]
+            },
+            {
+                "range": 100000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.000000005
+                    }
+                ]
+            },
+            {
+                "range": 1000000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000003,
+                        "range": 0.000000005
+                    }
+                ]
+            },
+            {
+                "range": 10000000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.000002,
+                        "range": 0.000000005
+                    }
+                ]
+            },
+            {
+                "range": 100000000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.00004,
+                        "range": 0.000001
+                    }
+                ]
+            },
+            {
+                "range": 1000000000, 
+                 "specs": [
+                    {
+                        "seconds_between_measurements": 600,
+                        "required_temperature_celsius": 23,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0004,
+                        "range": 0.000001
+                    }
+                ]
+            }
+         ]
+     },
+
+
+
+
+
+
+     "absolute": {
+
+
+
+
+
+        
+         "voltage.dc": [
+             {
+                 "range": 0.1, 
+                  "specs": [
+                     {
+                         "hours_from_calibration": 24.0,
+                         "absolute": 0.0,
+                         "reading": 0.000001,
+                         "range": 0.0000005
+                     },
+                     {
+                         "hours_from_calibration": 8760.0,
+                         "absolute": 0.0,
+                         "reading": 0.000006,
+                         "range": 0.0000005
+                     }
+                 ]
+             },
+             {
+                "range": 1.0, 
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.0000005,
+                        "range": 0.0000002
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000003,
+                        "range": 0.0000002
+                    }
+                ]
+            },
+            {
+                "range": 10.0, 
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.0000005,
+                        "range": 0.0000001
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000003,
+                        "range": 0.0000001
+                    }
+                ]
+            },
+            {
+                "range": 100.0, 
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000001,
+                        "range": 0.0000002
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000006,
+                        "range": 0.0000002
+                    }
+                ]
+            },
+            {
+                "range": 1000.0, 
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000001,
+                        "range": 0.0000002
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000006,
+                        "range": 0.0000002
+                    }
+                ]
+            }
+        ],
+
+
+
+
+
+        "resistance.4w": [
+            {
+                "range": 10.0, 
+                "current": 0.01,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000003,
+                        "range": 0.000001
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000012,
+                        "range": 0.000001
+                    }
+                ]
+            },
+            {
+                "range": 100.0, 
+                "current": 0.01,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.0000015,
+                        "range": 0.0000003
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000008,
+                        "range": 0.0000003
+                    }
+                ]
+            },
+            {
+                "range": 1000.0, 
+                "current": 0.001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000001,
+                        "range": 0.0000003
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000006,
+                        "range": 0.0000003
+                    }
+                ]
+            },
+            {
+                "range": 10000.0, 
+                "current": 0.0001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000001,
+                        "range": 0.0000003
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000006,
+                        "range": 0.0000003
+                    }
+                ]
+            },
+            {
+                "range": 100000.0, 
+                "current": 0.0001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000001,
+                        "range": 0.0000003
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.000006,
+                        "range": 0.0000003
+                    }
+                ]
+            },
+            {
+                "range": 1000000.0, 
+                "current": 0.00001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000002,
+                        "range": 0.0000007
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.00001,
+                        "range": 0.0000007
+                    }
+                ]
+            },
+            {
+                "range": 10000000.0, 
+                "current": 0.000001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.000004,
+                        "range": 0.000004
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.00002,
+                        "range": 0.000004
+                    }
+                ]
+            },
+            {
+                "range": 100000000.0, 
+                "current": 0.0000001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.00003,
+                        "range": 0.000045
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.0002,
+                        "range": 0.000045
+                    }
+                ]
+            },
+            {
+                "range": 1000000000.0, 
+                "current": 0.00000001,
+                 "specs": [
+                    {
+                        "hours_from_calibration": 24.0,
+                        "absolute": 0.0,
+                        "reading": 0.0003,
+                        "range": 0.00045
+                    },
+                    {
+                        "hours_from_calibration": 8760.0,
+                        "absolute": 0.0,
+                        "reading": 0.002,
+                        "range": 0.00045
+                    }
+                ]
+            }
+        ]
+        
+        
+
+
+
+
+    }
+}
