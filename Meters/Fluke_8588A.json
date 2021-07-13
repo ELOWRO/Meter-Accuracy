@@ -1,0 +1,100 @@
+{
+    "format": "org.macdr.v1",
+    "uid": "com.fluke.85882",
+    "manufacturer": "Fluke",
+    "manufacturer_full": "Fluke Corporation",
+    "model_name": "8588A Reference Multimeter",
+    "product_identifier": "8588A",
+    "source": "Datasheet",
+    "source_url": "https://download.flukecal.com/pub/literature/8588A_Rev_E_Specs.pdf",
+    "transfer": {
+        "transfer.voltage.dc": [
+            {
+                "range": 0.1,
+                "confidence": 0.95, 
+                "specs": [
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.0000002,
+                        "range": 0.000002
+                    }
+                ]
+            },
+            {
+                "range": 1.0,
+                "confidence": 0.95,
+                    "specs": [
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.00000006,
+                        "range": 0.0000003
+                    }
+                ]
+            },
+            {
+                "range": 10.0, 
+                "confidence": 0.95,
+                    "specs": [
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "absolute": 0.0,
+                        "reading": 0.00000005,
+                        "range": 0.00000005
+                    }
+                ]
+            },
+            {
+                "range": 100.0, 
+                "confidence": 0.95,
+                    "specs": [
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "impedance_ohms": 10000000,
+                        "absolute": 0.0,
+                        "reading": 0.0000004,
+                        "range": 0.0000003
+                    },
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "impedance_ohms": 1000000,
+                        "absolute": 0.0,
+                        "reading": 0.000002,
+                        "range": 0.000005
+                    }
+                ]
+            },
+            {
+                "range": 1000, 
+                "confidence": 0.95,
+                    "specs": [
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "impedance_ohms": 10000000,
+                        "absolute": 0.0,
+                        "reading": 0.0000004,
+                        "range": 0.0000005
+                    },
+                    {
+                        "seconds_between_measurements": 1200,
+                        "maximum_temperature_change": 1,
+                        "impedance_ohms": 1000000,
+                        "absolute": 0.0,
+                        "reading": 0.0000004,
+                        "range": 0.0000005
+                    }
+                ]
+            }
+        ]
+    },
+    "absolute": {
+        "absolute.voltage.dc": [ ]
+    }
+}

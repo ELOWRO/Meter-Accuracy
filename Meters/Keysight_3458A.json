@@ -7,20 +7,8 @@
      "product_identifier": "3458A",
      "source": "Datasheet",
      "source_url": "https://www.keysight.com/zz/en/assets/7018-06796/data-sheets/5965-4971.pdf",
-     
-     
-     
-     
-     
-     
      "transfer": {
-
-
-
-
-
-
-        "voltage.dc.transfer": [
+        "transfer.voltage.dc": [
             {
                 "range": 0.1, 
                  "specs": [
@@ -84,18 +72,8 @@
          ]
 
      },
-
-
-
-
-
-
-
-
-
-
      "absolute": {
-         "voltage.dc": [
+         "absolute.voltage.dc": [
              {
                  "range": 0.1, 
                   "specs": [
@@ -246,7 +224,7 @@
 
 
 
-         "current.dc": [
+         "absolute.current.dc": [
             {
                 "range": 0.0000001, 
                  "specs": [

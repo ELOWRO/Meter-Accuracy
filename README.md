@@ -52,32 +52,32 @@ Important: All assets must be public domain!
 
 All meter specs are expressed as key-values where key is amount of hours from calibration.
 
-#### Measured Absolute Quantities 
+#### Absolute Quantities 
 
 |               Identifier              | Unit     | Description                          |
 |:--------------------------------------|:---------| :------------------------------------|
-| `voltage.dc` 		 					| Volts    | DC Voltage
-| `current.dc`							| Amperes  | DC Current
-| `voltage.ac` 							| Volts    | AC Voltage
-| `current.ac`							| Amperes  | AC Current
-| `resistance.2w`						| Ohms     | Resistance 2-Wire
-| `resistance.4w`						| Ohms     | Resistance 4-Wire
-| `frequency`							| Herz     | Frequency
-| `capacitance`							| Farad    | Capacitance at Frequency
-| `inductance`							| Henres   | Inductance at Frequency
-| `impedance.phase`						| degrees  | Phase Angle of Impedance
+| `absolute.voltage.dc` 		 		| Volts    | DC Voltage
+| `absolute.current.dc`					| Amperes  | DC Current
+| `absolute.voltage.ac` 				| Volts    | AC Voltage
+| `absolute.current.ac`					| Amperes  | AC Current
+| `absolute.resistance.2w`				| Ohms     | Resistance 2-Wire
+| `absolute.resistance.4w`				| Ohms     | Resistance 4-Wire
+| `absolute.frequency`					| Herz     | Frequency
+| `absolute.capacitance`				| Farad    | Capacitance at Frequency
+| `absolute.inductance`					| Henres   | Inductance at Frequency
+| `absolute.impedance.phase`			| degrees  | Phase Angle of Impedance
 
 This list is NOT part of the MACDRv1 specification, more identifiers will be added along the way.
 
-#### Measured Transferred Quantities 
+#### Transfer Quantities 
 
 |               Identifier              | Unit     | Description                          |
 |:--------------------------------------|:---------| :------------------------------------|
-| `voltage.dc.transfer` 				| Volts    | DC Voltage Transfer
-| `voltage.ac.transfer` 				| Volts    | AC Voltage Transfer
-| `voltage.acdc.transfer` 				| Volts    | AC/DC Voltage Transfer
-| `resistance.2w.transfer`				| Ohms     | Resistance 2-Wire Transfer
-| `resistance.4w.transfer`				| Ohms     | Resistance 4-Wire Transfer
+| `transfer.voltage.dc` 				| Volts    | DC Voltage Transfer
+| `transfer.voltage.ac` 				| Volts    | AC Voltage Transfer
+| `transfer.voltage.acdc` 				| Volts    | AC/DC Voltage Transfer
+| `transfer.resistance.2w`				| Ohms     | Resistance 2-Wire Transfer
+| `transfer.resistance.4w`				| Ohms     | Resistance 4-Wire Transfer
 
 This list is NOT part of the MACDRv1 specification, more identifiers will be added along the way.
 
@@ -133,7 +133,7 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 {
 	"seconds_between_measurements": 0,
 	"required_temperature_celsius": 0,
-	"maximum_temperature_change": 0,
+	"maximum_temperature_change_celsius": 0,
 	"absolute": 0.0,
 	"reading": 0.0,
 	"range": 0.0
