@@ -111,7 +111,7 @@ for file in i18n_files:
                 unit = measurement["unit"]
                 symbol = measurement["symbol"]
                 outfile.write("\n#### %s\n" % measurement_description)
-                outfile.write("#####± (ppm %s + ppm %s)\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
+                outfile.write("**± (ppm %s + ppm %s)**\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
                 data = meter["absolute"][absolute_identifier]
 
                 times = []

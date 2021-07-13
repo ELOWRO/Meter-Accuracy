@@ -53,7 +53,7 @@
 ### Wartość Absolutna
 
 #### Napięcie DC
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 90 dni | 365 dni | 730 dni |
 |--:|:--:|:--:|:--:|:--:|
@@ -64,7 +64,7 @@
 | 1000.0000000V| 2.50 + 0.10 | 6.00 + 0.10 | 10.00 + 0.10 | 14.00 + 0.10 |
 
 #### Prąd Stały
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 90 dni | 365 dni | 730 dni |
 |--:|:--:|:--:|:--:|:--:|
@@ -102,7 +102,7 @@
 ### Wartość Absolutna
 
 #### Napięcie DC
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 90 dni | 365 dni | 730 dni |
 |--:|:--:|:--:|:--:|:--:|
@@ -113,7 +113,7 @@
 | 1000.0000000V| 2.50 + 0.30 | 4.50 + 0.30 | 6.00 + 0.30 | 10.00 + 0.30 |
 
 #### Prąd Stały
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 90 dni | 365 dni | 730 dni |
 |--:|:--:|:--:|:--:|:--:|
@@ -169,7 +169,7 @@
 ### Wartość Absolutna
 
 #### Napięcie DC
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 365 dni |
 |--:|:--:|:--:|
@@ -180,7 +180,7 @@
 | 1000.0000000V| 1.00 + 0.20 | 6.00 + 0.20 |
 
 #### Rezystancja 4-Wire
-#####± (ppm odczytu + ppm zakresu)
+**± (ppm odczytu + ppm zakresu)**
 
 | Zakres pomiarowy | 1 dni | 365 dni |
 |--:|:--:|:--:|

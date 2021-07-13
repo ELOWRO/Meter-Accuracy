@@ -53,7 +53,7 @@
 ### Absolute Value
 
 #### DC Voltage
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 90 days | 365 days | 730 days |
 |--:|:--:|:--:|:--:|:--:|
@@ -64,7 +64,7 @@
 | 1000.0000000V| 2.50 + 0.10 | 6.00 + 0.10 | 10.00 + 0.10 | 14.00 + 0.10 |
 
 #### DC Current
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 90 days | 365 days | 730 days |
 |--:|:--:|:--:|:--:|:--:|
@@ -102,7 +102,7 @@
 ### Absolute Value
 
 #### DC Voltage
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 90 days | 365 days | 730 days |
 |--:|:--:|:--:|:--:|:--:|
@@ -113,7 +113,7 @@
 | 1000.0000000V| 2.50 + 0.30 | 4.50 + 0.30 | 6.00 + 0.30 | 10.00 + 0.30 |
 
 #### DC Current
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 90 days | 365 days | 730 days |
 |--:|:--:|:--:|:--:|:--:|
@@ -169,7 +169,7 @@
 ### Absolute Value
 
 #### DC Voltage
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 365 days |
 |--:|:--:|:--:|
@@ -180,7 +180,7 @@
 | 1000.0000000V| 1.00 + 0.20 | 6.00 + 0.20 |
 
 #### Resistance 4-Wire
-#####± (ppm of reading + ppm of range)
+**± (ppm of reading + ppm of range)**
 
 | Range | 1 days | 365 days |
 |--:|:--:|:--:|
