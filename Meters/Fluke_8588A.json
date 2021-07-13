@@ -6,13 +6,14 @@
     "model_name": "8588A Reference Multimeter",
     "product_identifier": "8588A",
     "source": "Datasheet",
-    "source_url": "https://download.flukecal.com/pub/literature/8588A_Rev_E_Specs.pdf",
+    "source_url": "https://download.flukecal.com/pub/literature/8588A_Rev_E_accuracy.pdf",
     "transfer": {
         "transfer.voltage.dc": [
             {
                 "range": 0.1,
-                "confidence": 0.95, 
-                "specs": [
+                "confidence": 0.95,
+                "aperture_seconds": 1,
+                "accuracy": [
                     {
                         "seconds_between_measurements": 1200,
                         "maximum_temperature_change": 1,
@@ -25,7 +26,8 @@
             {
                 "range": 1.0,
                 "confidence": 0.95,
-                    "specs": [
+                "aperture_seconds": 1,
+                    "accuracy": [
                     {
                         "seconds_between_measurements": 1200,
                         "maximum_temperature_change": 1,
@@ -38,7 +40,8 @@
             {
                 "range": 10.0, 
                 "confidence": 0.95,
-                    "specs": [
+                "aperture_seconds": 1,
+                    "accuracy": [
                     {
                         "seconds_between_measurements": 1200,
                         "maximum_temperature_change": 1,
@@ -51,7 +54,8 @@
             {
                 "range": 100.0, 
                 "confidence": 0.95,
-                    "specs": [
+                "aperture_seconds": 1,
+                    "accuracy": [
                     {
                         "seconds_between_measurements": 1200,
                         "maximum_temperature_change": 1,
@@ -73,7 +77,8 @@
             {
                 "range": 1000, 
                 "confidence": 0.95,
-                    "specs": [
+                "aperture_seconds": 1,
+                    "accuracy": [
                     {
                         "seconds_between_measurements": 1200,
                         "maximum_temperature_change": 1,
@@ -95,6 +100,5 @@
         ]
     },
     "absolute": {
-        "absolute.voltage.dc": [ ]
     }
 }

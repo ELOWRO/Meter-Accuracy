@@ -112,6 +112,9 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 **Absolute**
 
 - `hours_from_calibration` - hours limit from meter calibration/adjustment
+- `confidence` - (optional) some manufacturers specify confidence (0.99 means 99%)
+- `aperture_seconds` - (optional) some manufacturers specify minimal aperture
+- `nplc` - (optional) some manufacturers specify minimal bumber of power line cycles
 
 ```json
 {
@@ -124,10 +127,12 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 ```
 
 **Transfer**
-
 - `seconds_between_measurements` - used in transfer specs, max time between measurements
-- `required_temperature_celsius` - (optional) some manufacturers specify only for selected transfer temperature
-- `maximum_temperature_change` - (optional) maximum temperature change between measurements
+- `required_temperature_celsius` - (optional) some manufacturers specify transfer temperature
+- `maximum_temperature_change` - (optional) maximum temperature change between measurements or from Tref/Tcal
+- `confidence` - (optional) some manufacturers specify confidence (0.99 means 99%)
+- `aperture_seconds` - (optional) some manufacturers specify minimal aperture
+- `nplc` - (optional) some manufacturers specify minimal bumber of power line cycles
 
 ```json
 {
@@ -146,10 +151,10 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 
 ```json
 {
-	"voltage.dc": [
+	"absolute.voltage.dc": [
 		{
 			"range": 0, 
-			"specs": []
+			"accuracy": []
 		}
 	]
 }
@@ -161,10 +166,10 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 
 ```json
 {
-	"current.dc": [
+	"absolute.current.dc": [
 		{
 			"range": 0, 
-			"specs": []
+			"accuracy": []
 		}
 	]
 }
@@ -177,7 +182,7 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 
 ```json
 {
-	"resistance.4w": [
+	"absolute.resistance.4w": [
 		{
 			"range": 0, 
 			"current": 0,

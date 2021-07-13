@@ -11,8 +11,9 @@
         "transfer.voltage.dc": [
             {
                 "range": 0.1, 
-                 "specs": [
+                 "accuracy": [
                     {
+                        "nplc": 100,
                         "seconds_between_measurements": 600,
                         "maximum_temperature_change": 0.5,
                         "absolute": 0.0,
@@ -23,8 +24,9 @@
             },
             {
                 "range": 1.0, 
-                 "specs": [
+                 "accuracy": [
                     {
+                        "nplc": 100,
                         "seconds_between_measurements": 600,
                         "maximum_temperature_change": 0.5,
                         "absolute": 0.0,
@@ -35,8 +37,9 @@
             },
             {
                 "range": 10.0, 
-                 "specs": [
+                 "accuracy": [
                     {
+                        "nplc": 100,
                         "seconds_between_measurements": 600,
                         "maximum_temperature_change": 0.5,
                         "absolute": 0.0,
@@ -47,8 +50,9 @@
             },
             {
                 "range": 100.0, 
-                 "specs": [
+                 "accuracy": [
                     {
+                        "nplc": 100,
                         "seconds_between_measurements": 600,
                         "maximum_temperature_change": 0.5,
                         "absolute": 0.0,
@@ -59,8 +63,9 @@
             },
             {
                 "range": 1000, 
-                 "specs": [
+                 "accuracy": [
                     {
+                        "nplc": 100,
                         "seconds_between_measurements": 600,
                         "maximum_temperature_change": 0.5,
                         "absolute": 0.0,
@@ -76,27 +81,34 @@
          "absolute.voltage.dc": [
              {
                  "range": 0.1, 
-                  "specs": [
+                  "accuracy": [
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 24.0,
+                         "maximum_temperature_change": 1.0,
                          "absolute": 0.0,
                          "reading": 0.0000025,
                          "range": 0.000003
                      },
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 2160.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000005,
                          "range": 0.000003
                      },
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 8760.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000009,
                          "range": 0.000003
                      },
-                     { 
+                     {   "nplc": 100,
                          "hours_from_calibration": 17520.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000014,
                          "range": 0.000003
@@ -105,27 +117,34 @@
              },
              {
                  "range": 1.0, 
-                  "specs": [
+                  "accuracy": [
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 24.0,
+                         "maximum_temperature_change": 1.0,
                          "absolute": 0.0,
                          "reading": 0.0000015,
                          "range": 0.0000003
                      },
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 2160.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.0000046,
                          "range": 0.0000003
                      },
                      {
+                         "nplc": 100,
                          "hours_from_calibration": 8760.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000008,
                          "range": 0.0000003
                      },
                      { 
                          "hours_from_calibration": 17520.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000014,
                          "range": 0.0000003
@@ -134,27 +153,31 @@
              },
              {
                  "range": 10.0, 
-                  "specs": [
+                  "accuracy": [
                      {
                          "hours_from_calibration": 24.0,
+                         "maximum_temperature_change": 1.0,
                          "absolute": 0.0,
                          "reading": 0.0000005,
                          "range": 0.00000005
                      },
                      {
                          "hours_from_calibration": 2160.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.0000041,
                          "range": 0.00000005
                      },
                      {
                          "hours_from_calibration": 8760.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000008,
                          "range": 0.00000005
                      },
                      { 
                          "hours_from_calibration": 17520.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000014,
                          "range": 0.00000005
@@ -163,27 +186,31 @@
              },
              {
                  "range": 100.0, 
-                  "specs": [
+                  "accuracy": [
                      {
                          "hours_from_calibration": 24.0,
+                         "maximum_temperature_change": 1.0,
                          "absolute": 0.0,
                          "reading": 0.0000025,
                          "range": 0.0000003
                      },
                      {
                          "hours_from_calibration": 2160.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000006,
                          "range": 0.0000003
                      },
                      {
                          "hours_from_calibration": 8760.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.00001,
                          "range": 0.0000003
                      },
                      { 
                          "hours_from_calibration": 17520.0,
+                         "maximum_temperature_change": 5.0,
                          "absolute": 0.0,
                          "reading": 0.000014,
                          "range": 0.0000003
@@ -192,7 +219,7 @@
              },
              {
                  "range": 1000.0, 
-                  "specs": [
+                  "accuracy": [
                      {
                          "hours_from_calibration": 24.0,
                          "absolute": 0.0,
@@ -227,7 +254,7 @@
          "absolute.current.dc": [
             {
                 "range": 0.0000001, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -256,7 +283,7 @@
             },
             {
                 "range": 0.000001, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -285,7 +312,7 @@
             },
             {
                 "range": 0.00001, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -314,7 +341,7 @@
             },
             {
                 "range": 0.0001, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -343,7 +370,7 @@
             },
             {
                 "range": 0.001, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -372,7 +399,7 @@
             },
             {
                 "range": 0.01, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -401,7 +428,7 @@
             },
             {
                 "range": 0.1, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,
@@ -430,7 +457,7 @@
             },
             {
                 "range": 1.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "absolute": 0.0,

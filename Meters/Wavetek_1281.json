@@ -11,7 +11,7 @@
         "transfer.voltage.dc": [
             {
                 "range": 0.1, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -24,7 +24,7 @@
             },
             {
                 "range": 1.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -37,7 +37,7 @@
             },
             {
                 "range": 10.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -50,7 +50,7 @@
             },
             {
                 "range": 100.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -63,7 +63,7 @@
             },
             {
                 "range": 1000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -84,7 +84,7 @@
         "transfer.resistance.4w": [
             {
                 "range": 10.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -97,7 +97,7 @@
             },
             {
                 "range": 100.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -110,7 +110,7 @@
             },
             {
                 "range": 1000.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -123,7 +123,7 @@
             },
             {
                 "range": 10000.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -136,7 +136,7 @@
             },
             {
                 "range": 100000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -149,7 +149,7 @@
             },
             {
                 "range": 1000000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -162,7 +162,7 @@
             },
             {
                 "range": 10000000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -175,7 +175,7 @@
             },
             {
                 "range": 100000000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -188,7 +188,7 @@
             },
             {
                 "range": 1000000000, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "seconds_between_measurements": 600,
                         "required_temperature_celsius": 23,
@@ -207,7 +207,7 @@
          "absolute.voltage.dc": [
              {
                  "range": 0.1, 
-                  "specs": [
+                  "accuracy": [
                      {
                          "hours_from_calibration": 24.0,
                          "required_temperature_celsius": 23,
@@ -228,7 +228,7 @@
              },
              {
                 "range": 1.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -249,7 +249,7 @@
             },
             {
                 "range": 10.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -270,7 +270,7 @@
             },
             {
                 "range": 100.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -291,7 +291,7 @@
             },
             {
                 "range": 1000.0, 
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -320,7 +320,7 @@
             {
                 "range": 10.0, 
                 "current": 0.01,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -342,7 +342,7 @@
             {
                 "range": 100.0, 
                 "current": 0.01,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -364,7 +364,7 @@
             {
                 "range": 1000.0, 
                 "current": 0.001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -386,7 +386,7 @@
             {
                 "range": 10000.0, 
                 "current": 0.0001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -408,7 +408,7 @@
             {
                 "range": 100000.0, 
                 "current": 0.0001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -430,7 +430,7 @@
             {
                 "range": 1000000.0, 
                 "current": 0.00001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -452,7 +452,7 @@
             {
                 "range": 10000000.0, 
                 "current": 0.000001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -474,7 +474,7 @@
             {
                 "range": 100000000.0, 
                 "current": 0.0000001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
@@ -496,7 +496,7 @@
             {
                 "range": 1000000000.0, 
                 "current": 0.00000001,
-                 "specs": [
+                 "accuracy": [
                     {
                         "hours_from_calibration": 24.0,
                         "required_temperature_celsius": 23,
