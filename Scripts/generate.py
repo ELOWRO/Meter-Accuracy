@@ -16,6 +16,7 @@ for file in files:
         data = json.load(json_file)
         uid = data["uid"]
         url = base_url + file
+        data["url"] = url
         meters_data.append(data)
         meters_index.append({
             "uid": uid,
@@ -45,7 +46,8 @@ for file in i18n_files:
             outfile.write("\n## %s %s\n" % (meter["manufacturer"], meter["product_identifier"]))
             outfile.write("- %s: %s\n" % (i18n["general"]["model"], meter["model_name"]))
             outfile.write("- %s: %s\n" % (i18n["general"]["manufacturer"], meter["manufacturer_full"]))
-            outfile.write("- %s: 📖 [%s](%s)\n" % (i18n["general"]["source"], meter["source"], meter["source_url"]))
+            outfile.write("- %s: [%s](%s)\n" % (i18n["general"]["source"], meter["source"], meter["source_url"]))
+            outfile.write("- %s: [MACDRv1 JSON](%s)\n" % (i18n["general"]["data"], meter["url"]))
 
             ## Transfer
             outfile.write("\n### %s\n" % (i18n["uncertainties"]["transfer"]))
@@ -69,17 +71,25 @@ for file in i18n_files:
 
                 for seconds_between_measurements in times:
                     outfile.write("\n#### %s\n" % measurement_description)
-  
-                    outfile.write("#####± (ppm %s + ppm %s)\n\n"  % (i18n["uncertainties"]["of_range"], i18n["uncertainties"]["of_reading"]))
-                    
+                    outfile.write("#####± (ppm %s + ppm %s)\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
                     outfile.write("| %s | %d %s |\n"  % (i18n["uncertainties"]["range"], seconds_between_measurements/60, i18n["uncertainties"]["minutes"]))
                     
                     outfile.write("|--:|:--:|\n")
                     for data in meter_data:
                         range = data["range"]
                         specs = data["specs"]
-                        for spec in specs:    
-                            outfile.write("| %.7f%s | %.2f + %.2f |\n"  % (range, symbol, spec["range"] * 1000000, spec["reading"] * 1000000))
+                        confidence = ""
+                        if "confidence" in data.keys():
+                            confidence_word = i18n["uncertainties"]["confidence"]
+                            confidence = " (%s %d%%) " % (confidence_word, data["confidence"]*100)
+                        for spec in specs:
+                            offset = ""
+                            if spec["absolute"] > 0:
+                                offset = "+ %.7f" % spec["absolute"]
+                            zin = ""
+                            if "impedance_ohms" in spec.keys():
+                                zin = "[%s: %dMΩ] " % (i18n["uncertainties"]["impedance"], spec["impedance_ohms"]/1000000)
+                            outfile.write("| %s%.7f%s | %.2f + %.2f %s%s |\n"  % (zin, range, symbol, spec["reading"] * 1000000, spec["range"] * 1000000, offset, confidence))
                     
             ## Absolute        
             outfile.write("\n### %s\n" % (i18n["uncertainties"]["absolute"]))
@@ -90,14 +100,18 @@ for file in i18n_files:
                 unit = measurement["unit"]
                 symbol = measurement["symbol"]
                 outfile.write("\n#### %s\n" % measurement_description)
+                outfile.write("#####± (ppm %s + ppm %s)\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
                 data = meter["absolute"][absolute_identifier]
-                outfile.write("| %s | %s | ± ppm %s | ± ppm %s | ± %s (%s) |\n"  % (i18n["uncertainties"]["range"], i18n["uncertainties"]["time_from_calibration_days"], i18n["uncertainties"]["of_range"], i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["absolute_offset"], symbol))
-                outfile.write("|--:|:--|--:|--:|--:|\n")
+                outfile.write("| %s | %s | XXX |\n"  % (i18n["uncertainties"]["range"], i18n["uncertainties"]["time_from_calibration_days"]))
+                outfile.write("|--:|:--|--:|\n")
                 for item in data:
                     range = item["range"]
                     specs = item["specs"]
                     for spec in specs: 
-                        outfile.write("| %.7f%s | %d | %.2f | %.2f | %.7f |\n"  % (range, symbol, spec["hours_from_calibration"]/24, spec["range"] * 1000000, spec["reading"] * 1000000, spec["absolute"]))
+                        offset = ""
+                        if spec["absolute"] > 0:
+                            offset = "+ %.7f%s %s" % (spec["absolute"], unit, i18n["uncertainties"]["absolute_offset"])
+                        outfile.write("| %.7f%s | %d | %.2f + %.2f%s |\n"  % (range, symbol, spec["hours_from_calibration"]/24, spec["reading"] * 1000000, spec["range"] * 1000000, offset))
                     
         outfile.flush()
         outfile.close()

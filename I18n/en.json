@@ -9,6 +9,7 @@
         "manufacturer": "Manufacturer",
         "model": "Model",
         "source": "Source",
+        "data": "Data",
         "photo": "Photo",
         "3d_model": "3D Model"
     },
@@ -26,7 +27,7 @@
         "minutes": "minutes",
         "time": "Time",
         "confidence": "Confidence",
-        "impedance": "Impedance"     
+        "impedance": "Zin"     
     },
     "measurements": {
         "absolute.voltage.dc": {"unit": "Volts", "symbol": "V", "description": "DC Voltage"},

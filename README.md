@@ -95,10 +95,10 @@ This list is NOT part of the MACDRv1 specification, more identifiers will be add
 	"source": "{url}",
 	"source_url": "{url}",
 	"transfer": {
-		"{Quantity Identifier}": [ ]
+		"{Measurement Identifier}": [ ]
 	},
 	"absolute": {
-		"{Quantity Identifier}": [ ]
+		"{Measurement Identifier}": [ ]
 	}
 }
 ```

@@ -87,8 +87,8 @@
                         "maximum_temperature_change": 1,
                         "impedance_ohms": 1000000,
                         "absolute": 0.0,
-                        "reading": 0.0000004,
-                        "range": 0.0000005
+                        "reading": 0.000004,
+                        "range": 0.000025
                     }
                 ]
             }
