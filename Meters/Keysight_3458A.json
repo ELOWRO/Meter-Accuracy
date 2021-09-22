@@ -7,483 +7,502 @@
      "product_identifier": "3458A",
      "source": "Datasheet",
      "source_url": "https://www.keysight.com/zz/en/assets/7018-06796/data-sheets/5965-4971.pdf",
+     "photo_url": "./Media/KS3458A.png",
+     "photo_url_author": "Keysight Technologies",
      "transfer": {
-        "transfer.voltage.dc": [
-            {
-                "range": 0.1, 
-                 "accuracy": [
-                    {
-                        "nplc": 100,
-                        "seconds_between_measurements": 600,
-                        "maximum_temperature_change": 0.5,
-                        "absolute": 0.0,
-                        "reading": 0.0000005,
-                        "range": 0.0000005
-                    }
-                ]
+
+
+
+
+        "transfer.voltage.dc": {
+            "conditions": {
+                "nplc": 100,
+                "resolution": 8.5,
+                "warmup_hours": 4,
+                "readings_per_second": 0.6,
+                "min_of_fullscale_multiplier": 0.1,
+                "maximum_temperature_change": 0.5,
+                "with_acal": false
             },
-            {
-                "range": 1.0, 
-                 "accuracy": [
-                    {
-                        "nplc": 100,
-                        "seconds_between_measurements": 600,
-                        "maximum_temperature_change": 0.5,
-                        "absolute": 0.0,
-                        "reading": 0.000003,
-                        "range": 0.0000001
-                    }
-                ]
-            },
-            {
-                "range": 10.0, 
-                 "accuracy": [
-                    {
-                        "nplc": 100,
-                        "seconds_between_measurements": 600,
-                        "maximum_temperature_change": 0.5,
-                        "absolute": 0.0,
-                        "reading": 0.00000005,
-                        "range": 0.00000005
-                    }
-                ]
-            },
-            {
-                "range": 100.0, 
-                 "accuracy": [
-                    {
-                        "nplc": 100,
-                        "seconds_between_measurements": 600,
-                        "maximum_temperature_change": 0.5,
-                        "absolute": 0.0,
-                        "reading": 0.0000005,
-                        "range": 0.0000001
-                    }
-                ]
-            },
-            {
-                "range": 1000, 
-                 "accuracy": [
-                    {
-                        "nplc": 100,
-                        "seconds_between_measurements": 600,
-                        "maximum_temperature_change": 0.5,
-                        "absolute": 0.0,
-                        "reading": 0.0000015,
-                        "range": 0.00000005
-                    }
-                ]
-            }
-         ]
+            "ranges": [
+                {
+                    "range": 0.1, 
+                    "accuracy": [
+                        {
+                            "seconds_between_measurements": 600,
+                            "absolute": 0.0,
+                            "reading": 0.0000005,
+                            "range": 0.0000005
+                        }
+                    ]
+                },
+                {
+                    "range": 1.0, 
+                    "accuracy": [
+                        {
+                            "seconds_between_measurements": 600,
+                            "absolute": 0.0,
+                            "reading": 0.000003,
+                            "range": 0.0000001
+                        }
+                    ]
+                },
+                {
+                    "range": 10.0, 
+                    "accuracy": [
+                        {
+                            "seconds_between_measurements": 600,
+                            "absolute": 0.0,
+                            "reading": 0.00000005,
+                            "range": 0.00000005
+                        }
+                    ]
+                },
+                {
+                    "range": 100.0, 
+                    "accuracy": [
+                        {
+                            "seconds_between_measurements": 600,
+                            "absolute": 0.0,
+                            "reading": 0.0000005,
+                            "range": 0.0000001
+                        }
+                    ]
+                },
+                {
+                    "range": 1000, 
+                    "accuracy": [
+                        {
+                            "seconds_between_measurements": 600,
+                            "absolute": 0.0,
+                            "reading": 0.0000015,
+                            "range": 0.00000005
+                        }
+                    ]
+                }
+            ]
+        }
 
      },
      "absolute": {
-         "absolute.voltage.dc": [
-             {
-                 "range": 0.1, 
-                  "accuracy": [
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 24.0,
-                         "maximum_temperature_change": 1.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000025,
-                         "range": 0.000003
-                     },
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 2160.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000005,
-                         "range": 0.000003
-                     },
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 8760.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000009,
-                         "range": 0.000003
-                     },
-                     {   "nplc": 100,
-                         "hours_from_calibration": 17520.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000014,
-                         "range": 0.000003
-                     }
-                 ]
-             },
-             {
-                 "range": 1.0, 
-                  "accuracy": [
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 24.0,
-                         "maximum_temperature_change": 1.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000015,
-                         "range": 0.0000003
-                     },
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 2160.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000046,
-                         "range": 0.0000003
-                     },
-                     {
-                         "nplc": 100,
-                         "hours_from_calibration": 8760.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000008,
-                         "range": 0.0000003
-                     },
-                     { 
-                         "hours_from_calibration": 17520.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000014,
-                         "range": 0.0000003
-                     }
-                 ]
-             },
-             {
-                 "range": 10.0, 
-                  "accuracy": [
-                     {
-                         "hours_from_calibration": 24.0,
-                         "maximum_temperature_change": 1.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000005,
-                         "range": 0.00000005
-                     },
-                     {
-                         "hours_from_calibration": 2160.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000041,
-                         "range": 0.00000005
-                     },
-                     {
-                         "hours_from_calibration": 8760.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000008,
-                         "range": 0.00000005
-                     },
-                     { 
-                         "hours_from_calibration": 17520.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000014,
-                         "range": 0.00000005
-                     }
-                 ]
-             },
-             {
-                 "range": 100.0, 
-                  "accuracy": [
-                     {
-                         "hours_from_calibration": 24.0,
-                         "maximum_temperature_change": 1.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000025,
-                         "range": 0.0000003
-                     },
-                     {
-                         "hours_from_calibration": 2160.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000006,
-                         "range": 0.0000003
-                     },
-                     {
-                         "hours_from_calibration": 8760.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.00001,
-                         "range": 0.0000003
-                     },
-                     { 
-                         "hours_from_calibration": 17520.0,
-                         "maximum_temperature_change": 5.0,
-                         "absolute": 0.0,
-                         "reading": 0.000014,
-                         "range": 0.0000003
-                     }
-                 ]
-             },
-             {
-                 "range": 1000.0, 
-                  "accuracy": [
-                     {
-                         "hours_from_calibration": 24.0,
-                         "absolute": 0.0,
-                         "reading": 0.0000025,
-                         "range": 0.0000001
-                     },
-                     {
-                         "hours_from_calibration": 2160.0,
-                         "absolute": 0.0,
-                         "reading": 0.000006,
-                         "range": 0.0000001
-                     },
-                     {
-                         "hours_from_calibration": 8760.0,
-                         "absolute": 0.0,
-                         "reading": 0.00001,
-                         "range": 0.0000001
-                     },
-                     { 
-                         "hours_from_calibration": 17520.0,
-                         "absolute": 0.0,
-                         "reading": 0.000014,
-                         "range": 0.0000001
-                     }
-                 ]
-             }
-         ],
+        "absolute.voltage.dc": {
+            "conditions": {
+                "nplc": 100,
+                "with_acal": true,
+                "maximum_temperature_change_from_acal": 1.0,
+                "readings_per_second": 0.6,
+                "resolution": 8.5,
+                "with_math_null": true
+            },
+            "ranges": [ 
+                {
+                    "range": 0.1, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "maximum_temperature_change": 1.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000025,
+                            "range": 0.000003
+                        },
+                        {
+                            "hours_from_calibration": 2160.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000005,
+                            "range": 0.000003
+                        },
+                        {
+                            "hours_from_calibration": 8760.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000009,
+                            "range": 0.000003
+                        },
+                        {   
+                            "hours_from_calibration": 17520.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000014,
+                            "range": 0.000003
+                        }
+                    ]
+                    
+                },
+                {
+                    "range": 1.0, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "maximum_temperature_change": 1.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000015,
+                            "range": 0.0000003
+                        },
+                        {
+                            "hours_from_calibration": 2160.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000046,
+                            "range": 0.0000003
+                        },
+                        {
+                            "hours_from_calibration": 8760.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000008,
+                            "range": 0.0000003
+                        },
+                        { 
+                            "hours_from_calibration": 17520.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000014,
+                            "range": 0.0000003
+                        }
+                    ]
+                },
+                {
+                    "range": 10.0, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "maximum_temperature_change": 1.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000005,
+                            "range": 0.00000005
+                        },
+                        {
+                            "hours_from_calibration": 2160.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000041,
+                            "range": 0.00000005
+                        },
+                        {
+                            "hours_from_calibration": 8760.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000008,
+                            "range": 0.00000005
+                        },
+                        { 
+                            "hours_from_calibration": 17520.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000014,
+                            "range": 0.00000005
+                        }
+                    ]
+                },
+                {
+                    "range": 100.0, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "maximum_temperature_change": 1.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000025,
+                            "range": 0.0000003
+                        },
+                        {
+                            "hours_from_calibration": 2160.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000006,
+                            "range": 0.0000003
+                        },
+                        {
+                            "hours_from_calibration": 8760.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.0000003
+                        },
+                        { 
+                            "hours_from_calibration": 17520.0,
+                            "maximum_temperature_change": 5.0,
+                            "absolute": 0.0,
+                            "reading": 0.000014,
+                            "range": 0.0000003
+                        }
+                    ]
+                },
+                {
+                    "range": 1000.0, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.0000025,
+                            "range": 0.0000001
+                        },
+                        {
+                            "hours_from_calibration": 2160.0,
+                            "absolute": 0.0,
+                            "reading": 0.000006,
+                            "range": 0.0000001
+                        },
+                        {
+                            "hours_from_calibration": 8760.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.0000001
+                        },
+                        { 
+                            "hours_from_calibration": 17520.0,
+                            "absolute": 0.0,
+                            "reading": 0.000014,
+                            "range": 0.0000001
+                        }
+                    ]
+                }
+            ]
+        },
 
 
-
-
-         "absolute.current.dc": [
-            {
-                "range": 0.0000001, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.0004
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.00003,
-                        "range": 0.0004
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00003,
-                        "range": 0.0004
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000035,
-                        "range": 0.0004
-                    }
-                ]
+        "absolute.current.dc": {
+            "conditions": {
+                "nplc": 100,
+                "with_acal": true,
+                "maximum_temperature_change_from_acal": 1.0,
+                "readings_per_second": 0.6,
+                "resolution": 8.5
             },
-            {
-                "range": 0.000001, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.00004
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000015,
-                        "range": 0.00004
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00002,
-                        "range": 0.00004
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.00004
-                    }
-                ]
-            },
-            {
-                "range": 0.00001, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.000007
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000015,
-                        "range": 0.00001
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00002,
-                        "range": 0.00001
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.00001
-                    }
-                ]
-            },
-            {
-                "range": 0.0001, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.000006
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000015,
-                        "range": 0.000008
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00002,
-                        "range": 0.000008
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.000008
-                    }
-                ]
-            },
-            {
-                "range": 0.001, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.000004
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000015,
-                        "range": 0.000005
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00002,
-                        "range": 0.000005
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.000005
-                    }
-                ]
-            },
-            {
-                "range": 0.01, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.00001,
-                        "range": 0.000004
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000015,
-                        "range": 0.000005
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00002,
-                        "range": 0.000005
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.000005
-                    }
-                ]
-            },
-            {
-                "range": 0.1, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.000025,
-                        "range": 0.000004
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.000030,
-                        "range": 0.000005
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.000035,
-                        "range": 0.000005
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000040,
-                        "range": 0.000005
-                    }
-                ]
-            },
-            {
-                "range": 1.0, 
-                 "accuracy": [
-                    {
-                        "hours_from_calibration": 24.0,
-                        "absolute": 0.0,
-                        "reading": 0.0001,
-                        "range": 0.00001
-                    },
-                    {
-                        "hours_from_calibration": 2160,
-                        "absolute": 0.0,
-                        "reading": 0.0001,
-                        "range": 0.00001
-                    },
-                    {
-                        "hours_from_calibration": 8760,
-                        "absolute": 0.0,
-                        "reading": 0.00011,
-                        "range": 0.00001
-                    },
-                    { 
-                        "hours_from_calibration": 17520,
-                        "absolute": 0.0,
-                        "reading": 0.000115,
-                        "range": 0.00001
-                    }
-                ]
-            }
-         ]
+            "ranges": [ 
+                {
+                    "range": 0.0000001, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.0004
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.00003,
+                            "range": 0.0004
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00003,
+                            "range": 0.0004
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000035,
+                            "range": 0.0004
+                        }
+                    ]
+                },
+                {
+                    "range": 0.000001, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.00004
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000015,
+                            "range": 0.00004
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00002,
+                            "range": 0.00004
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.00004
+                        }
+                    ]
+                },
+                {
+                    "range": 0.00001, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.000007
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000015,
+                            "range": 0.00001
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00002,
+                            "range": 0.00001
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.00001
+                        }
+                    ]
+                },
+                {
+                    "range": 0.0001, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.000006
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000015,
+                            "range": 0.000008
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00002,
+                            "range": 0.000008
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.000008
+                        }
+                    ]
+                },
+                {
+                    "range": 0.001, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.000004
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000015,
+                            "range": 0.000005
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00002,
+                            "range": 0.000005
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.000005
+                        }
+                    ]
+                },
+                {
+                    "range": 0.01, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.00001,
+                            "range": 0.000004
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000015,
+                            "range": 0.000005
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00002,
+                            "range": 0.000005
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.000005
+                        }
+                    ]
+                },
+                {
+                    "range": 0.1, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.000025,
+                            "range": 0.000004
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.000030,
+                            "range": 0.000005
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.000035,
+                            "range": 0.000005
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000040,
+                            "range": 0.000005
+                        }
+                    ]
+                },
+                {
+                    "range": 1.0, 
+                    "accuracy": [
+                        {
+                            "hours_from_calibration": 24.0,
+                            "absolute": 0.0,
+                            "reading": 0.0001,
+                            "range": 0.00001
+                        },
+                        {
+                            "hours_from_calibration": 2160,
+                            "absolute": 0.0,
+                            "reading": 0.0001,
+                            "range": 0.00001
+                        },
+                        {
+                            "hours_from_calibration": 8760,
+                            "absolute": 0.0,
+                            "reading": 0.00011,
+                            "range": 0.00001
+                        },
+                        { 
+                            "hours_from_calibration": 17520,
+                            "absolute": 0.0,
+                            "reading": 0.000115,
+                            "range": 0.00001
+                        }
+                    ]
+                }
+            ]
+        }
      }
  }

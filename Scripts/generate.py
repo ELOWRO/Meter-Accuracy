@@ -13,6 +13,8 @@ files.remove("index.json")
 meters_index = []
 meters_data = []
 for file in files:
+    if file.endswith(".json") == False:
+        continue
     with open(meters_path + "/" + file,) as json_file:
         data = json.load(json_file)
         uid = data["uid"]
@@ -45,65 +47,100 @@ for file in i18n_files:
 
         for meter in meters_data:
             print(meter["product_identifier"])
-            outfile.write("\n## %s %s\n" % (meter["manufacturer"], meter["product_identifier"]))
+            outfile.write("\n## %s %s\n\n" % (meter["manufacturer"], meter["product_identifier"]))
+
+            if "photo_url" in meter.keys():
+                photo_url = meter["photo_url"]
+                outfile.write("![%s](%s)\n\n" % (meter["product_identifier"], photo_url))
+                
+            
+
             outfile.write("- %s: %s\n" % (i18n["general"]["model"], meter["model_name"]))
             outfile.write("- %s: %s\n" % (i18n["general"]["manufacturer"], meter["manufacturer_full"]))
             outfile.write("- %s: [%s](%s)\n" % (i18n["general"]["source"], meter["source"], meter["source_url"]))
             outfile.write("- %s: [MACDRv1 JSON](%s)\n" % (i18n["general"]["data"], meter["url"]))
 
+
+
             ## Transfer
-            outfile.write("\n### %s\n" % (i18n["uncertainties"]["transfer"]))
+            outfile.write("\n### %s\n\n" % (i18n["uncertainties"]["transfer"]))
 
             
             for transfer_identifier in meter["transfer"].keys():
                 meter_data = meter["transfer"][transfer_identifier]
-                times = []
-                for data in meter_data:
-                    accuracy = data["accuracy"]
-                    for spec in accuracy: 
-                        seconds_between_measurements = spec["seconds_between_measurements"]
-                        if seconds_between_measurements not in times:   
-                            times.append(seconds_between_measurements)
-
                 measurement = i18n["measurements"][transfer_identifier]
                 measurement_description = measurement["description"]
                 unit = measurement["unit"]
                 symbol = measurement["symbol"]
-                meter_data = meter["transfer"][transfer_identifier]
+                conditions = meter_data["conditions"]
+                
+   
+                outfile.write("\n#### %s\n\n" % (measurement_description))
+                outfile.write("##### %s\n\n" %  i18n["uncertainties"]["conditions"])
 
-                for seconds_between_measurements in times:
-                    outfile.write("\n#### %s\n\n" % (measurement_description))
+                if "resolution" in conditions.keys():
+                    outfile.write("- %s: %.1f\n" % (i18n["uncertainties"]["resolution"], conditions["resolution"]))
+                if "nplc" in conditions.keys():
+                    outfile.write("- %s: %d\n" % (i18n["uncertainties"]["nplc"], conditions["nplc"]))
+
+                if "warmup_hours" in conditions.keys():
+                    outfile.write("- %s: %d\n" % (i18n["uncertainties"]["warmup_hours"], conditions["warmup_hours"]))
+                if "readings_per_second" in conditions.keys():
+                    outfile.write("- %s: %.2f\n" % (i18n["uncertainties"]["readings_per_second"], conditions["readings_per_second"]))
+                if "with_acal" in conditions.keys():
+                    if conditions["with_acal"] == True:
+                        outfile.write("- %s\n" % (i18n["uncertainties"]["with_acal"]))
+                temp = ""
+                if "required_temperature_celsius" in conditions.keys():
+                    temp += "T = "
+                    temp += "%.1f " % conditions["required_temperature_celsius"]
+                if "maximum_temperature_change_from_acal" in conditions.keys():
+                    temp += "Tacal ±%.1f °C " % conditions["maximum_temperature_change_from_acal"]
+                if "maximum_temperature_change" in conditions.keys():
+                    temp += "Tref "
+                    temp += "±%.1f °C " % conditions["maximum_temperature_change"]
+
+                outfile.write("- %s\n" % temp)
+
+                ranges = meter_data["ranges"]
+                
+                times = []
+                for range in ranges:
+                    accuracies = range["accuracy"]
+                    for accuracy in accuracies:
+                        seconds_between_measurements = accuracy["seconds_between_measurements"]
+                        if seconds_between_measurements not in times:
+                            times.append(seconds_between_measurements)
+
+                for time in times:
+                    seconds_between_measurements = time
+                    outfile.write("\n")
+
                     outfile.write("**%s: %d %s**\n\n" % (i18n["uncertainties"]["time_between_measurements"], seconds_between_measurements/60, i18n["uncertainties"]["minutes"]))
-                    
-                    outfile.write("**± (ppm %s + ppm %s)**\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
-                    outfile.write("| %s | %s |\n"  % (i18n["uncertainties"]["range"], i18n["general"]["uncertainty"]))
-                    
+                    outfile.write("| %s | %s ± (ppm %s + ppm %s) |\n"  % (i18n["uncertainties"]["range"], i18n["general"]["uncertainty"], i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
                     outfile.write("|--:|:--:|\n")
-                    for data in meter_data:
+
+                    for data in ranges:
+                        accuracies = data["accuracy"]
                         range = data["range"]
-                        accuracy = data["accuracy"]
-                        confidence = ""
-                        if "confidence" in data.keys():
-                            confidence_word = i18n["uncertainties"]["confidence"]
-                            confidence = " (%s %d%%) " % (confidence_word, data["confidence"]*100)
-                        for spec in accuracy:
-                            conditions = ""
-                            if "required_temperature_celsius" in spec.keys():
-                                conditions += "%.1f " % spec["required_temperature_celsius"]
-                            else:
-                                conditions += "Tref "
-                            if "maximum_temperature_change" in spec.keys():
-                                conditions += "±%.1f °C" % spec["maximum_temperature_change"]
+
+                        for accuracy in accuracies:
+                            if accuracy["seconds_between_measurements"] != time:
+                                continue
+                            confidence = ""
+                            if "confidence" in data.keys():
+                                confidence_word = i18n["uncertainties"]["confidence"]
+                                confidence = " (%s %d%%) " % (confidence_word, accuracy["confidence"]*100)
                             offset = ""
-                            if spec["absolute"] > 0:
-                                offset = "+ %.7f" % spec["absolute"]
+                            if accuracy["absolute"] > 0:
+                                offset = "+ %.7f" % accuracy["absolute"]
                             zin = ""
-                            if "impedance_ohms" in spec.keys():
-                                zin = "[%s: %dMΩ] " % (i18n["uncertainties"]["impedance"], spec["impedance_ohms"]/1000000)
-                            outfile.write("| %s%.7f%s | %.2f + %.2f %s%s [%s] |\n"  % (zin, range, symbol, spec["reading"] * 1000000, spec["range"] * 1000000, offset, confidence, conditions))
-                    
+                            if "impedance_ohms" in accuracy.keys():
+                                zin = "[%s: %dMΩ] " % (i18n["uncertainties"]["impedance"], accuracy["impedance_ohms"]/1000000)
+                            outfile.write("| %s%.7f%s | %.2f + %.2f %s%s|\n"  % (zin, range, symbol, accuracy["reading"] * 1000000, accuracy["range"] * 1000000, offset, confidence))
+                
             ## Absolute        
-            outfile.write("\n### %s\n" % (i18n["uncertainties"]["absolute"]))
+            outfile.write("\n### %s\n\n" % (i18n["uncertainties"]["absolute"]))
 
             for absolute_identifier in meter["absolute"].keys():
                 measurement = i18n["measurements"][absolute_identifier]
@@ -111,8 +148,41 @@ for file in i18n_files:
                 unit = measurement["unit"]
                 symbol = measurement["symbol"]
                 outfile.write("\n#### %s\n" % measurement_description)
+
+
+                outfile.write("##### %s\n\n" %  i18n["uncertainties"]["conditions"])
+                conditions = meter["absolute"][absolute_identifier]['conditions']
+
+                if "resolution" in conditions.keys():
+                    outfile.write("- %s: %.1f\n" % (i18n["uncertainties"]["resolution"], conditions["resolution"]))
+                if "nplc" in conditions.keys():
+                    outfile.write("- %s: %d\n" % (i18n["uncertainties"]["nplc"], conditions["nplc"]))
+                if "warmup_hours" in conditions.keys():
+                    outfile.write("- %s: %d\n" % (i18n["uncertainties"]["warmup_hours"], conditions["warmup_hours"]))
+                if "readings_per_second" in conditions.keys():
+                    outfile.write("- %s: %.2f\n" % (i18n["uncertainties"]["readings_per_second"], conditions["readings_per_second"]))
+                if "with_acal" in conditions.keys():
+                    if conditions["with_acal"] == True:
+                        outfile.write("- %s\n" % (i18n["uncertainties"]["with_acal"]))
+
+                temp = ""
+                if "required_temperature_celsius" in conditions.keys():
+                    temp += "T = "
+                    temp += "%.1f " % conditions["required_temperature_celsius"]
+                if "maximum_temperature_change_from_acal" in conditions.keys():
+                    temp += "Tacal ±%.1f °C " % conditions["maximum_temperature_change_from_acal"]
+                if "maximum_temperature_change" in conditions.keys():
+                    temp += "Tref "
+                    temp += "±%.1f °C " % conditions["maximum_temperature_change"]
+
+                outfile.write("- %s\n" % temp)
+
+                outfile.write("\n")
+
                 outfile.write("**± (ppm %s + ppm %s)**\n\n"  % (i18n["uncertainties"]["of_reading"], i18n["uncertainties"]["of_range"]))
-                data = meter["absolute"][absolute_identifier]
+                
+
+                data = meter["absolute"][absolute_identifier]['ranges']
 
                 times = []
                 ranges = []
@@ -125,6 +195,7 @@ for file in i18n_files:
                         seconds_between_measurements = spec["hours_from_calibration"]
                         if seconds_between_measurements not in times:   
                             times.append(seconds_between_measurements)
+
                 titles = " | ". join([str(int(number/24)) + " " +i18n["uncertainties"]["days"] for number in times] )
                 outfile.write("| %s | %s |\n"  % (i18n["uncertainties"]["range"], titles))
                 outfile.write("|--:" + "|:--:"*len(times) + "|\n")
